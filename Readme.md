@@ -2,7 +2,7 @@
 
 A LangGraph-powered AI agent that searches high quality academic and reference sources to answer research questions with cited, verifiable answers.
 
-Its aim is to help source citation from high quality online information, like scientific papers, from established reputable outlets.
+Its aim is to help researchers find and source citations from high quality online information, like scientific papers, from established reputable outlets.
 
 ## Architecture
 
