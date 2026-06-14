@@ -5,8 +5,10 @@ defines, builds and manages the graph of nodes and edges that represent the agen
 
 from langgraph.graph import StateGraph, END
 
+from agent.state import AgentState
 
-def build_graph() -> Graph:
+
+def build_graph() -> StateGraph:
     graph = StateGraph(AgentState)
 
     # --- Register Nodes ------------------------
