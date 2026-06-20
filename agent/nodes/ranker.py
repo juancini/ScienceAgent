@@ -10,10 +10,11 @@ SOURCE_WEIGHTS = {
     "europepmc": 0.95,
     "openalex": 0.9,
     "semantic_scholar": 0.9,
-    "arxiv": 0.85,
+    "arXiv": 0.85,
     "loc": 0.85,
     "wikipedia": 0.75,
     "wayback": 0.6,
+    "Google Scholar": 0.8,
 }
 
 
