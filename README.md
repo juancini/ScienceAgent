@@ -29,3 +29,4 @@ This repo is made as AI friendly as possible, by including the path and intended
 | --- | --- | --- |
 |arXiv | Physics / Math / CS / Bio | REST|
 |Wikipedia | General | MediaWiki REST|
+|Europe PMC | Life Sciences | REST | 
