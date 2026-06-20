@@ -6,12 +6,13 @@ LLM node - classifies the query into a scientific domain and identifies relevant
 # To be replaced with swapping LLMs in the future
 import json
 
-from agent.state import AgentState, SearchResult
-from langchain_openai import ChatOpenAI
+from langchain_groq import ChatGroq
+
+from agent.state import AgentState
 from langchain_core.messages import SystemMessage, HumanMessage
 
 
-llm = ChatOpenAI(model="gpt-4-0613", temperature=0.0)
+llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
 
 SYSTEM_PROMPT = """You are a research query classifier.
 Given a user's research question, respond with a JSON object with exactly these fields:

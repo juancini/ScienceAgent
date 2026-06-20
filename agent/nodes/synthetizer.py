@@ -3,13 +3,13 @@ agent/nodes/synthetizer.py
 LLM node - takes the ranked results and synthesizes a final answer with citations.
 """
 
-from langchain_openai import ChatOpenAI
+from langchain_groq import ChatGroq
 from langchain_core.messages import SystemMessage, HumanMessage
 
 from agent.state import AgentState, AgentState, SearchResult
 
 
-llm = ChatOpenAI(model="gpt-4-0613", temperature=0.2)
+llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
 
 SYSTEM_PROMPT = """You are a research assistant synthesizing an answer from verified sources.
 

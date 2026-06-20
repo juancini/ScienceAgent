@@ -3,8 +3,14 @@ main.py
 Entry point for the Science Agent
 """
 
+from dotenv import load_dotenv
+
+load_dotenv()  # Load environment variables from .env file
+
 import argparse
 import textwrap
+
+from agent.graph import science_agent
 
 
 def run_query(query: str) -> None:
@@ -23,7 +29,7 @@ def run_query(query: str) -> None:
         "error": None,
     }
 
-    final_state = science_agent(initial_state)
+    final_state = science_agent.invoke(initial_state)
 
     print("=" * 60)
     print("Answer")

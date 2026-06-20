@@ -5,6 +5,11 @@ defines, builds and manages the graph of nodes and edges that represent the agen
 
 from langgraph.graph import StateGraph, END
 
+from agent.nodes.classifier import classify_query
+from agent.nodes.fetcher import fetch_results
+from agent.nodes.ranker import rank_results
+from agent.nodes.source_router import route_sources
+from agent.nodes.synthetizer import synthesize_answer
 from agent.state import AgentState
 
 
@@ -30,4 +35,4 @@ def build_graph() -> StateGraph:
 
 
 # Singleton — import this in main.py
-research_agent = build_graph()
+science_agent = build_graph()

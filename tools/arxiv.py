@@ -8,6 +8,7 @@ No API key required.
 import httpx
 
 from agent.state import SearchResult
+import xml.etree.ElementTree as ET
 
 
 BASE_URL = "http://export.arxiv.org/api/query"
