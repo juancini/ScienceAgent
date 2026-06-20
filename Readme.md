@@ -27,4 +27,5 @@ This repo is made as AI friendly as possible, by including the path and intended
 ## Supported Sources
 | Source | Domain | API Type |
 | --- | --- | --- |
-|arXiv | Physics / Math / CS / Bio | REST
+|arXiv | Physics / Math / CS / Bio | REST|
+|Wikipedia | General | MediaWiki REST|

@@ -4,6 +4,7 @@ import asyncio
 
 from agent.state import AgentState, SearchResult
 from tools.arxiv import search_arxiv
+from tools.wikipedia import search_wikipedia
 
 
 SOURCE_REGISTRY = {
