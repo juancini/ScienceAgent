@@ -8,6 +8,7 @@ from tools.europepmc import search_europepmc
 from tools.loc import search_loc
 from tools.openalex import search_openalex
 from tools.pubmed import search_pubmed
+from tools.scholar import search_scholar
 from tools.semantic_scholar import search_semantic_scholar
 from tools.wayback import search_wayback
 from tools.wikipedia import search_wikipedia
@@ -18,10 +19,11 @@ SOURCE_REGISTRY = {
     "openalex": search_openalex,
     "semantic_scholar": search_semantic_scholar,
     "wikipedia": search_wikipedia,
-    "arxiv": search_arxiv,
+    "arXiv": search_arxiv,
     "loc": search_loc,
     "wayback": search_wayback,
     "europepmc": search_europepmc,
+    "Google Scholar": search_scholar,
 }
 
 
@@ -30,15 +32,25 @@ async def _fetch_all(
 ) -> list[SearchResult]:
     """Fetch results from all selected sources in parallel."""
     tasks = []
+    source_names = []
     for source in sources:
         search_fn = SOURCE_REGISTRY.get(source)
         if search_fn:
             tasks.append(search_fn(query, keywords))
+            source_names.append(source)
         else:
             print(f"Warning: No search function registered for source '{source}'")
+
     results = await asyncio.gather(*tasks, return_exceptions=True)
-    # Nested comprehension list that flattens results and filter out empty responses
-    return [item for sublist in results for item in sublist if item]
+
+    # Filter out exceptions, flatten results, and filter out empty responses
+    final_results = []
+    for source_name, result in zip(source_names, results):
+        if isinstance(result, Exception):
+            print(f"Warning: Error fetching from '{source_name}': {result}")
+        else:
+            final_results.extend([item for item in result if item])
+    return final_results
 
 
 def fetch_results(state: AgentState) -> AgentState:
