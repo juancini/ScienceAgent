@@ -31,3 +31,4 @@ This repo is made as AI friendly as possible, by including the path and intended
 |Wikipedia | General | MediaWiki REST|
 |Europe PMC | Life Sciences | REST | 
 |PubMed | (NCBI Entrez) | Medicine / Biology | REST |
+| Semantic Scholar | CS / AI / Science | REST |
