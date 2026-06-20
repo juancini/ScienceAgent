@@ -27,8 +27,10 @@ This repo is made as AI friendly as possible, by including the path and intended
 ## Supported Sources
 | Source | Domain | API Type |
 | --- | --- | --- |
-|arXiv | Physics / Math / CS / Bio | REST|
-|Wikipedia | General | MediaWiki REST|
-|Europe PMC | Life Sciences | REST | 
-|PubMed | (NCBI Entrez) | Medicine / Biology | REST |
+| arXiv | Physics / Math / CS / Bio | REST|
+| Wikipedia | General | MediaWiki REST|
+| Europe PMC | Life Sciences | REST | 
+| PubMed | (NCBI Entrez) | Medicine / Biology | REST |
 | Semantic Scholar | CS / AI / Science | REST |
+| OpenAlex | All academic fields | REST |
+| Library of Congress | History / Law | REST |

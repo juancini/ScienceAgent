@@ -5,7 +5,10 @@ import asyncio
 from agent.state import AgentState, SearchResult
 from tools.arxiv import search_arxiv
 from tools.europepmc import search_europepmc
+from tools.loc import search_loc
+from tools.openalex import search_openalex
 from tools.pubmed import search_pubmed
+from tools.semantic_scholar import search_semantic_scholar
 from tools.wikipedia import search_wikipedia
 
 
