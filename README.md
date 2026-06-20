@@ -34,3 +34,4 @@ This repo is made as AI friendly as possible, by including the path and intended
 | Semantic Scholar | CS / AI / Science | REST |
 | OpenAlex | All academic fields | REST |
 | Library of Congress | History / Law | REST |
+| Wayback Machine | Historical web | REST |
